@@ -1,0 +1,14 @@
+.popup {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 350px;
+  height: 300px;
+  background-color: #ffffff;
+  input {
+    width: 50%;
+  }
+  span {
+    display: block;
+  }
+}

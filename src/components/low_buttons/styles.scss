@@ -1,0 +1,20 @@
+.lowbuttons {
+  padding: 40px;
+  &__link {
+    display: block;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__support {
+    position: absolute;
+    top: 97%;
+    color: #bbbbbb;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}

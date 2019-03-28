@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Title, Form, LowButtons, Popup } from "./components";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+    constructor(props) {
+        super(props);
+        this.showPopup = this.showPopup.bind(this);
+        this.state = {
+            showPopup: false
+        }
+    }
+    render() {
+        return (
+        <div className="App">
+            {!this.state.showPopup &&
+            <div>
+                <Title/>
+                <b className="App__text">Войдите в свой профиль</b>
+                <Form showPopup={this.showPopup}/>
+                <LowButtons/>
+            </div>
+            }
+            {this.state.showPopup && <Popup />}
+        </div>
     );
+  }
+  showPopup() {
+      document.body.style.backgroundColor = '#bbbbbb';
+      this.setState({
+            showPopup: true
+        });
   }
 }
 

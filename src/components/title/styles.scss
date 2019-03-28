@@ -1,0 +1,18 @@
+.title {
+  &__text {
+    padding: 40px;
+    white-space: nowrap;
+    &_bold {
+      font-size: 30px;
+      font-weight: bold;
+      color: #000000;
+      letter-spacing: 2px;
+    }
+    &_thin {
+      font-size: 30px;
+      color: #000000;
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+  }
+}
